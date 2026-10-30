@@ -1,7 +1,8 @@
-import { StatusBar, Text, View } from 'react-native';
+import { StatusBar, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useFonts } from 'expo-font';
 import OnboardingOne from './src/screens/OnboardingOne';
+import OnboardingThree from './src/screens/OnboardingThree';
 
 export default function App() {
 
@@ -23,8 +24,8 @@ export default function App() {
   return (
     <SafeAreaView>
       <View>
-        <OnboardingOne />   
-        <StatusBar />
+        <OnboardingOne />
+        <StatusBar style="auto" />
       </View>
     </SafeAreaView>
   );
