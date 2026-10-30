@@ -1,6 +1,7 @@
-import { useFonts } from 'expo-font';
 import { StatusBar, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useFonts } from 'expo-font';
+import OnboardingOne from './src/screens/OnboardingOne';
 
 export default function App() {
 
@@ -22,7 +23,7 @@ export default function App() {
   return (
     <SafeAreaView>
       <View>
-        <Text>Open up App.js to start working on your app!</Text>
+        <OnboardingOne />   
         <StatusBar />
       </View>
     </SafeAreaView>
