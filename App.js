@@ -3,6 +3,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useFonts } from 'expo-font';
 import OnboardingOne from './src/screens/OnboardingOne';
 import OnboardingThree from './src/screens/OnboardingThree';
+import Login from './src/screens/Login';
 
 export default function App() {
 
@@ -15,6 +16,7 @@ export default function App() {
     sfProDisplayRegular: require('./src/assets/fonts/sf-pro-display-regular.ttf'),
     sfProDisplayMedium: require('./src/assets/fonts/sf-pro-display-medium.ttf'),
     sfProDisplayBold: require('./src/assets/fonts/sf-pro-display-bold.ttf'),
+    googleSansMedium: require('./src/assets/fonts/google-sans-medium.ttf'),
   })
 
   if (!loaded) {
@@ -24,7 +26,9 @@ export default function App() {
   return (
     <SafeAreaView>
       <View>
-        <OnboardingOne />
+        {/* <OnboardingOne /> */}
+        {/* <OnboardingThree /> */}
+        <Login />
         <StatusBar style="auto" />
       </View>
     </SafeAreaView>
