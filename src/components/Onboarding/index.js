@@ -1,7 +1,7 @@
 import { Image } from 'react-native'
 import { ActiveBar, BackgroundImage, Bar, BarWrapper, ContentWrapper, OnboardingButton, OnboardingDesc, OnboardingNav, OnboardingSkip, OnboardingTitle, OnboardingWrapper, TitleWrapper } from './style'
 import logo from '../../assets/icons/logo.png'
-import rightArrow from '../../assets/icons/right-arrow.webp'
+import arrowRight from '../../assets/icons/arrow-right.webp'
 
 const Onboarding = ({ backgroundImage, title, desc, activeBar }) => {
     return (
@@ -16,7 +16,7 @@ const Onboarding = ({ backgroundImage, title, desc, activeBar }) => {
 
                     <OnboardingNav>
                         <OnboardingSkip>pular</OnboardingSkip>
-                        <OnboardingButton><Image source={rightArrow} /></OnboardingButton>
+                        <OnboardingButton><Image source={arrowRight} /></OnboardingButton>
                     </OnboardingNav>
 
                     <BarWrapper>

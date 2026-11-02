@@ -4,12 +4,14 @@ import { useFonts } from 'expo-font';
 import OnboardingOne from './src/screens/OnboardingOne';
 import OnboardingThree from './src/screens/OnboardingThree';
 import Login from './src/screens/Login';
+import Category from './src/screens/Category';
 
 export default function App() {
 
   const [loaded] = useFonts({
     interLight: require('./src/assets/fonts/inter-24pt-light.ttf'),
     interRegular: require('./src/assets/fonts/inter-24pt-regular.ttf'),
+    interMedium: require('./src/assets/fonts/inter-24pt-medium.ttf'),
     interSemiBold: require('./src/assets/fonts/inter-24pt-semi-bold.ttf'),
     interBold: require('./src/assets/fonts/inter-24pt-bold.ttf'),
     fugazOne: require('./src/assets/fonts/fugaz-one-regular.ttf'),
@@ -26,10 +28,11 @@ export default function App() {
   return (
     <SafeAreaView>
       <View>
+        <StatusBar style="auto" />
         {/* <OnboardingOne /> */}
         {/* <OnboardingThree /> */}
-        <Login />
-        <StatusBar style="auto" />
+        {/* <Login /> */}
+        <Category />
       </View>
     </SafeAreaView>
   );
