@@ -1,5 +1,5 @@
 import Onboarding from "../../components/Onboarding"
-import OnboardingTwoHero from '../../assets/images/onboarding-two-hero.png'
+import OnboardingTwoHero from '../../assets/images/onboarding-two-hero.webp'
 
 
 const OnboardingTwo = () => {
