@@ -5,6 +5,7 @@ import OnboardingOne from './src/screens/OnboardingOne';
 import OnboardingThree from './src/screens/OnboardingThree';
 import Login from './src/screens/Login';
 import Category from './src/screens/Category';
+import PlaceDetail from './src/screens/PlaceDetail';
 
 export default function App() {
 
@@ -32,7 +33,9 @@ export default function App() {
         {/* <OnboardingOne /> */}
         {/* <OnboardingThree /> */}
         {/* <Login /> */}
-        <Category />
+        {/* <Category /> */}
+        <PlaceDetail />
+        
       </View>
     </SafeAreaView>
   );
