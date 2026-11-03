@@ -32,9 +32,9 @@ export default function App() {
         <StatusBar style="auto" />
         {/* <OnboardingOne /> */}
         {/* <OnboardingThree /> */}
-        {/* <Login /> */}
+        <Login />
         {/* <Category /> */}
-        <PlaceDetail />
+        {/* <PlaceDetail /> */}
         
       </View>
     </SafeAreaView>

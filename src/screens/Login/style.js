@@ -21,6 +21,11 @@ export const LogotypeText = styled.Text`
     font-family: 'fugazOne';
 `
 
+export const Icon = styled.Image`
+    width: 24px;
+    height: 24px;
+`
+
 export const LogotypeHighlight = styled(LogotypeText)`
     color: #C96440;
 `

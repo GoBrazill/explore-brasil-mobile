@@ -64,7 +64,7 @@ export const CardIcon = styled(BlurView).attrs({
     
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.6);
-    background-color: rgba(255, 255, 255, 0.65); 
+    background-color: rgba(255, 255, 255, 0.6); 
 `
 
 export const Icon = styled.Image`

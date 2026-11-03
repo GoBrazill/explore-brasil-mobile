@@ -1,7 +1,8 @@
 import { Image } from "react-native"
-import { ContinueWithGoogleWrapper, ContinueWithText, ContinueWithWrapper, FormWrapper, GoogleButton, GoogleLogo, GoogleText, Input, InputWrapper, Label, LabelWrapper, Line, Link, LoginWrapper, LogotypeHighlight, LogotypeText, LogotypeWrapper, SignUpLink, SignUpText, SubText, Title, TitleWrapper } from "./style"
+import { ContinueWithGoogleWrapper, ContinueWithText, ContinueWithWrapper, FormWrapper, GoogleButton, GoogleLogo, GoogleText, Icon, Input, InputWrapper, Label, LabelWrapper, Line, Link, LoginWrapper, LogotypeHighlight, LogotypeText, LogotypeWrapper, SignUpLink, SignUpText, SubText, Title, TitleWrapper } from "./style"
 import logo from '../../assets/icons/logo.png'
-import email from '../../assets/icons/email.webp'
+import email from '../../assets/icons/email-icon.webp'
+import padlock from '../../assets/icons/padlock-icon.webp'
 import ButtonSignUp from "../../components/ButtonSignUp"
 
 const Login = () => {
@@ -21,7 +22,7 @@ const Login = () => {
                     <Label>E-mail</Label>
 
                     <InputWrapper>
-                        <Image source={email} />
+                        <Icon source={email} />
                         <Input keyboardType="email-address" placeholder="seuemail@exemplo.com" />
                     </InputWrapper>
                 </LabelWrapper>
@@ -30,7 +31,7 @@ const Login = () => {
                     <Label>Senha</Label>
 
                     <InputWrapper>
-                        <Image source={email} />
+                        <Icon source={padlock} />
                         <Input keyboardType="decimal-pad" placeholder="****************" />
                     </InputWrapper>
 
