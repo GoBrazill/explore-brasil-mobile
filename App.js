@@ -7,7 +7,7 @@ import OnboardingTwo from './src/screens/OnboardingTwo';
 import Login from './src/screens/Login';
 import Category from './src/screens/Category';
 import PlaceDetail from './src/screens/PlaceDetail';
-
+import { Home } from "./src/screens/Home/index"
 export default function App() {
 
   const [loaded] = useFonts({
@@ -30,7 +30,8 @@ export default function App() {
   return (
     <SafeAreaView>
       <View>
-        <OnboardingOne />
+        <Home/>
+        {/* <OnboardingOne /> */}
         {/* <OnboardingTwo/> */}
         {/* <OnboardingThree/> */}
         {/* <OnboardingOne /> */}
