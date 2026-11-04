@@ -33,6 +33,19 @@ export const Home = () => {
                 </SearchContainer>
             </Header>
 
+            <ExploreContainer>
+                <ExploreCategories>
+                    <ExploreTitle>Explore por categoria</ExploreTitle>
+                    <ExploreAnchor>Ver todas</ExploreAnchor>
+                </ExploreCategories>
+                <CategoriesContainer>
+                    <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Praia"} />
+                    <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Museum"} />
+                    <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Restaurante"} />
+                    <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Parques"} />
+                    <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Cultura"} />
+                </CategoriesContainer>
+            </ExploreContainer>
 
 
         </View>
