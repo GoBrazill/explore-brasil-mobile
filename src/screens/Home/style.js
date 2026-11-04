@@ -64,3 +64,42 @@ export const SearchBarFilter = styled.Image`
   height: 24px;
 `;
 
+export const ExploreContainer = styled.View`
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding-top: 22px;
+`
+
+export const ExploreCategories = styled.View`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    padding: 0 20px;
+`
+export const ExploreTitle = styled.Text`
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+`
+export const ExploreAnchor = styled.Text`
+    color: #C96440;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+`
+export const CategoriesContainer = styled.View`
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: stretch;
+`
