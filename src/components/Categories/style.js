@@ -6,7 +6,6 @@ export const CategoryContainer = styled.View`
   align-items: center;
   min-width: 63px;
   max-width: 93px;
-  border: 1px solid purple;
 `
 
 export const Category = styled.View`

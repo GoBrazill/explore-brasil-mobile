@@ -1,27 +1,42 @@
-import { View, Image } from "react-native"
-import MagnifyingGlass from "../../assets/icons/magnifying-glass.webp"
-import Filter from "../../assets/icons/filter-icon.webp"
+import { View, Text } from "react-native";
+import {
+    Header,
+    SearchContainer,
+    SearchBar,
+    SearchBarIcon,
+    SearchBarInput,
+    SearchBarFilter,
+    FilterButton,
+    ExploreCategories,
+    ExploreTitle,
+    ExploreAnchor,
+    CategoriesContainer,
+    ExploreContainer,
+} from "./style";
+import Categories from "../../components/Categories"
+import MagnifyingGlass from "../../assets/icons/magnifying-glass.webp";
+import Filter from "../../assets/icons/filter-icon.webp";
 
 export const Home = () => {
     return (
         <View>
-            <View>
-                <View>
-                    <Image source={MagnifyingGlass} />
-                    <Text>Busque destinos, cidades...</Text>
-                </View>
-                <Image source={Filter}/>
-            </View>
+            <Header>
+                <SearchContainer>
+                    <SearchBar>
+                        <SearchBarIcon source={MagnifyingGlass} />
+                        <SearchBarInput placeholder="Busque destinos, cidades..." />
+                    </SearchBar>
 
-            <View>
-                <Text>Explore por categoria</Text>
-                <Text>Ver todas</Text>
-            </View>
+                    <FilterButton activeOpacity={0.7}>
+                        <SearchBarFilter source={Filter} />
+                    </FilterButton>
+                </SearchContainer>
+            </Header>
 
-            <View>
 
-            </View>
 
         </View>
-    )
-}
+    );
+};
+
+export default Home;
