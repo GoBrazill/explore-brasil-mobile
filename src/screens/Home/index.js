@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import {
     Header,
     SearchContainer,
@@ -12,10 +12,21 @@ import {
     ExploreAnchor,
     CategoriesContainer,
     ExploreContainer,
+    GetInspiredContainer,
+    GetInspiredBackground,
+    InspireContainer,
+    InspireText,
+    InspireTitle,
+    SeeRoadMap,
+    RoadMapText,
+    RoadMapIcon,
 } from "./style";
-import Categories from "../../components/Categories"
+
+import Categories from "../../components/Categories";
 import MagnifyingGlass from "../../assets/icons/magnifying-glass.webp";
 import Filter from "../../assets/icons/filter-icon.webp";
+import ArrowRight from "../../assets/icons/arrow-right.webp";
+import SantaCatarinaImg from "../../assets/images/santa-catarina-image.webp";
 
 export const Home = () => {
     return (
@@ -47,7 +58,18 @@ export const Home = () => {
                 </CategoriesContainer>
             </ExploreContainer>
 
-
+            <GetInspiredContainer>
+                <GetInspiredBackground source={SantaCatarinaImg}>
+                    <InspireContainer>
+                        <InspireText>Inspire-se</InspireText>
+                    </InspireContainer>
+                    <InspireTitle>Descubra Santa Catarina</InspireTitle>
+                    <SeeRoadMap>
+                        <RoadMapText>ver roteiro</RoadMapText>
+                        <RoadMapIcon source={ArrowRight} />
+                    </SeeRoadMap>
+                </GetInspiredBackground>
+            </GetInspiredContainer>
         </View>
     );
 };
