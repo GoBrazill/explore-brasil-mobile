@@ -33,6 +33,7 @@ import Filter from "../../assets/icons/filter-icon.webp";
 import ArrowRight from "../../assets/icons/arrow-right.webp";
 import SantaCatarinaImg from "../../assets/images/santa-catarina-image.webp";
 import CarouselCard from "../../components/CarouselCard";
+import BottomNav from "../../components/BottomNav";
 
 // Mock de dados para o Carrossel
 const recommendedItems = [
@@ -131,6 +132,7 @@ export const Home = () => {
                     ))}
                 </CarouselScroll>
             </RecommendedContainer>
+            <BottomNav/>
         </ScrollView>
     );
 };
