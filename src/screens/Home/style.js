@@ -103,3 +103,64 @@ export const CategoriesContainer = styled.View`
     align-items: center;
     align-self: stretch;
 `
+
+export const GetInspiredContainer = styled.View`
+  margin-top: 22px;
+  padding: 10px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+`;
+
+export const GetInspiredBackground = styled.ImageBackground.attrs({
+  imageStyle: { borderRadius: 22 }
+})`
+  padding: 20px 15px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 22px;
+  overflow: hidden;
+  background-color: #d3d3d3;
+`;
+
+export const InspireContainer = styled.View`
+  padding: 5px 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+  background-color: rgba(201, 100, 64, 0.60);
+`;
+
+export const InspireText = styled.Text`
+  color: #FAFAFA;
+  font-size: 14px;
+  font-weight: 700;
+`;
+
+export const InspireTitle = styled.Text`
+  width: 195px;
+  color: #FAFAFA;
+  font-size: 24px;
+  font-weight: 700;
+`;
+
+export const SeeRoadMap = styled.View`
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+`;
+
+export const RoadMapText = styled.Text`
+  color: #FAFAFA;
+  font-size: 14px;
+  font-weight: 600;
+`;
+
+export const RoadMapIcon = styled.Image`
+  width: 24px;
+  height: 24px;
+`;
