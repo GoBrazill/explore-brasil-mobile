@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { ScrollView } from "react-native";
 import {
     Header,
     SearchContainer,
@@ -20,6 +20,11 @@ import {
     SeeRoadMap,
     RoadMapText,
     RoadMapIcon,
+    RecommendedContainer,
+    RecommendedHeader,
+    RecommendedTitle,
+    RecommendedAnchor,
+    CarouselScroll,
 } from "./style";
 
 import Categories from "../../components/Categories";
@@ -27,10 +32,37 @@ import MagnifyingGlass from "../../assets/icons/magnifying-glass.webp";
 import Filter from "../../assets/icons/filter-icon.webp";
 import ArrowRight from "../../assets/icons/arrow-right.webp";
 import SantaCatarinaImg from "../../assets/images/santa-catarina-image.webp";
+import CarouselCard from "../../components/CarouselCard";
+
+// Mock de dados para o Carrossel
+const recommendedItems = [
+    {
+        id: "1",
+        title: "Lagoa da Conceição",
+        rate: "4,9",
+        location: "Florianópolis, SC",
+        isFavorite: true,
+    },
+    {
+        id: "2",
+        title: "Praia do Rosa",
+        rate: "4,8",
+        location: "Imbituba, SC",
+        isFavorite: false,
+    },
+    {
+        id: "3",
+        title: "Serra do Rio do Rastro",
+        rate: "5,0",
+        location: "Lauro Müller, SC",
+        isFavorite: false,
+    },
+];
 
 export const Home = () => {
     return (
-        <View>
+        <ScrollView showsVerticalScrollIndicator={false}>
+            {/* Header */}
             <Header>
                 <SearchContainer>
                     <SearchBar>
@@ -44,6 +76,7 @@ export const Home = () => {
                 </SearchContainer>
             </Header>
 
+            {/* Explore por categoria */}
             <ExploreContainer>
                 <ExploreCategories>
                     <ExploreTitle>Explore por categoria</ExploreTitle>
@@ -58,6 +91,7 @@ export const Home = () => {
                 </CategoriesContainer>
             </ExploreContainer>
 
+            {/* Card Inspire-se */}
             <GetInspiredContainer>
                 <GetInspiredBackground source={SantaCatarinaImg}>
                     <InspireContainer>
@@ -70,7 +104,34 @@ export const Home = () => {
                     </SeeRoadMap>
                 </GetInspiredBackground>
             </GetInspiredContainer>
-        </View>
+
+            {/* Seção Recomendados com Carrossel Horizontal */}
+            <RecommendedContainer>
+                <RecommendedHeader>
+                    <RecommendedTitle>Recomendados para você</RecommendedTitle>
+                    <RecommendedAnchor>Ver todas</RecommendedAnchor>
+                </RecommendedHeader>
+
+                <CarouselScroll>
+                    {recommendedItems.map((item) => (
+                        <CarouselCard
+                            key={item.id}
+                            cardBackground={require("../../assets/images/lagoa-da-conceicao-image.webp")}
+                            cardFavorite={
+                                item.isFavorite
+                                    ? require("../../assets/icons/heart-active-icon.webp")
+                                    : require("../../assets/icons/heart-desactive-icon.webp")
+                            }
+                            cardTitle={item.title}
+                            cardRateIcon={require("../../assets/icons/star-icon.webp")}
+                            cardRate={item.rate}
+                            cardLocationIcon={require("../../assets/icons/pin-icon.webp")}
+                            cardLocation={item.location}
+                        />
+                    ))}
+                </CarouselScroll>
+            </RecommendedContainer>
+        </ScrollView>
     );
 };
 
