@@ -10,6 +10,7 @@ import Login from './src/screens/Login';
 import Category from './src/screens/Category';
 import PlaceDetail from './src/screens/PlaceDetail';
 import  Home  from "./src/screens/Home/index"
+import  CommingSoon  from './src/screens/ComingSoonScreen';
 export default function App() {
 
   const [loaded] = useFonts({
@@ -31,7 +32,8 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-        <Home/>
+      <CommingSoon/>
+        {/* <Home/> */}
         {/* <OnboardingOne /> */}
         {/* <OnboardingTwo/> */}
         {/* <OnboardingThree/> */}
