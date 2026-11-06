@@ -1,25 +1,38 @@
-import { Image, Pressable, View, Text } from "react-native"
-import Header from "../../components/Header"
+import Header from "../../components/Header";
 import BottomNav from "../../components/BottomNav";
 import ButtonSignUp from "../../components/ButtonSignUp";
-import { CommingSoonContainer, CommingSoonDescription, CommingSoonImage, CommingSoonMessage, CommingSoonTitle } from "./style";
+import {
+    MainContainer,
+    CommingSoonContainer,
+    CommingSoonDescription,
+    CommingSoonImage,
+    CommingSoonMessage,
+    CommingSoonTitle,
+} from "./style";
 
-
-export const CommingSoon = ({ heroImage, title, description }) => {
+export const CommingSoon = ({ heroImage, title, description, onBackPress }) => {
     return (
-        <View>
-            <Header title={"Em breve"} />
+        <MainContainer>
+            <Header
+                variant="comeBack"
+                title="Em breve"
+                onBackPress={onBackPress}
+            />
+
             <CommingSoonContainer>
-                <CommingSoonImage source={heroImage} />
+                <CommingSoonImage source={heroImage} resizeMode="contain" />
+
                 <CommingSoonMessage>
                     <CommingSoonTitle>{title}</CommingSoonTitle>
                     <CommingSoonDescription>{description}</CommingSoonDescription>
                 </CommingSoonMessage>
-                <ButtonSignUp text={"voltar para o inicio"}/>
+
+                <ButtonSignUp text={"voltar para o inicio"} />
             </CommingSoonContainer>
-            <BottomNav/>
-        </View>
-    )
-}
+
+            <BottomNav />
+        </MainContainer>
+    );
+};
 
 export default CommingSoon;
