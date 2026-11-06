@@ -1,4 +1,5 @@
 import { StatusBar, View } from 'react-native';
+// import {} from "./style";
 // import { SafeAreaView } from 'react-native-safe-area-context';
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { useFonts } from 'expo-font';
@@ -30,7 +31,6 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-      <View>
         <Home/>
         {/* <OnboardingOne /> */}
         {/* <OnboardingTwo/> */}
@@ -40,9 +40,7 @@ export default function App() {
         {/* <Login /> */}
         {/* <Category /> */}
         {/* <PlaceDetail /> */}
-        
         <StatusBar style="auto" />
-      </View>
     </SafeAreaProvider>
   );
 }

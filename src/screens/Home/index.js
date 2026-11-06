@@ -1,5 +1,8 @@
-import { ScrollView } from "react-native";
+import React, { useState } from "react";
+import { useSafeAreaInsets } from "react-native-safe-area-context"; // Importando o hook
 import {
+    MainContainer,
+    ContentScroll,
     Header,
     SearchContainer,
     SearchBar,
@@ -7,11 +10,11 @@ import {
     SearchBarInput,
     SearchBarFilter,
     FilterButton,
+    ExploreContainer,
     ExploreCategories,
     ExploreTitle,
     ExploreAnchor,
     CategoriesContainer,
-    ExploreContainer,
     GetInspiredContainer,
     GetInspiredBackground,
     InspireContainer,
@@ -35,7 +38,6 @@ import SantaCatarinaImg from "../../assets/images/santa-catarina-image.webp";
 import CarouselCard from "../../components/CarouselCard";
 import BottomNav from "../../components/BottomNav";
 
-// Mock de dados para o Carrossel
 const recommendedItems = [
     {
         id: "1",
@@ -61,10 +63,12 @@ const recommendedItems = [
 ];
 
 export const Home = () => {
+    const [currentTab, setCurrentTab] = useState("home");
+    const insets = useSafeAreaInsets(); // Obtém { top, bottom, left, right }
+
     return (
-        <ScrollView showsVerticalScrollIndicator={false}>
-            {/* Header */}
-            <Header>
+        <MainContainer>
+            <Header topInset={insets.top}>
                 <SearchContainer>
                     <SearchBar>
                         <SearchBarIcon source={MagnifyingGlass} />
@@ -77,63 +81,63 @@ export const Home = () => {
                 </SearchContainer>
             </Header>
 
-            {/* Explore por categoria */}
-            <ExploreContainer>
-                <ExploreCategories>
-                    <ExploreTitle>Explore por categoria</ExploreTitle>
-                    <ExploreAnchor>Ver todas</ExploreAnchor>
-                </ExploreCategories>
-                <CategoriesContainer>
-                    <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Praia"} />
-                    <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Museum"} />
-                    <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Restaurante"} />
-                    <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Parques"} />
-                    <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Cultura"} />
-                </CategoriesContainer>
-            </ExploreContainer>
+            <ContentScroll>
+                <ExploreContainer>
+                    <ExploreCategories>
+                        <ExploreTitle>Explore por categoria</ExploreTitle>
+                        <ExploreAnchor>Ver todas</ExploreAnchor>
+                    </ExploreCategories>
+                    <CategoriesContainer>
+                        <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Praia"} />
+                        <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Museum"} />
+                        <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Restaurante"} />
+                        <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Parques"} />
+                        <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Cultura"} />
+                    </CategoriesContainer>
+                </ExploreContainer>
 
-            {/* Card Inspire-se */}
-            <GetInspiredContainer>
-                <GetInspiredBackground source={SantaCatarinaImg}>
-                    <InspireContainer>
-                        <InspireText>Inspire-se</InspireText>
-                    </InspireContainer>
-                    <InspireTitle>Descubra Santa Catarina</InspireTitle>
-                    <SeeRoadMap>
-                        <RoadMapText>ver roteiro</RoadMapText>
-                        <RoadMapIcon source={ArrowRight} />
-                    </SeeRoadMap>
-                </GetInspiredBackground>
-            </GetInspiredContainer>
+                <GetInspiredContainer>
+                    <GetInspiredBackground source={SantaCatarinaImg}>
+                        <InspireContainer>
+                            <InspireText>Inspire-se</InspireText>
+                        </InspireContainer>
+                        <InspireTitle>Descubra Santa Catarina</InspireTitle>
+                        <SeeRoadMap>
+                            <RoadMapText>ver roteiro</RoadMapText>
+                            <RoadMapIcon source={ArrowRight} />
+                        </SeeRoadMap>
+                    </GetInspiredBackground>
+                </GetInspiredContainer>
 
-            {/* Seção Recomendados com Carrossel Horizontal */}
-            <RecommendedContainer>
-                <RecommendedHeader>
-                    <RecommendedTitle>Recomendados para você</RecommendedTitle>
-                    <RecommendedAnchor>Ver todas</RecommendedAnchor>
-                </RecommendedHeader>
+                <RecommendedContainer>
+                    <RecommendedHeader>
+                        <RecommendedTitle>Recomendados para você</RecommendedTitle>
+                        <RecommendedAnchor>Ver todas</RecommendedAnchor>
+                    </RecommendedHeader>
 
-                <CarouselScroll>
-                    {recommendedItems.map((item) => (
-                        <CarouselCard
-                            key={item.id}
-                            cardBackground={require("../../assets/images/lagoa-da-conceicao-image.webp")}
-                            cardFavorite={
-                                item.isFavorite
-                                    ? require("../../assets/icons/heart-active-icon.webp")
-                                    : require("../../assets/icons/heart-desactive-icon.webp")
-                            }
-                            cardTitle={item.title}
-                            cardRateIcon={require("../../assets/icons/star-icon.webp")}
-                            cardRate={item.rate}
-                            cardLocationIcon={require("../../assets/icons/pin-icon.webp")}
-                            cardLocation={item.location}
-                        />
-                    ))}
-                </CarouselScroll>
-            </RecommendedContainer>
-            <BottomNav/>
-        </ScrollView>
+                    <CarouselScroll>
+                        {recommendedItems.map((item) => (
+                            <CarouselCard
+                                key={item.id}
+                                cardBackground={require("../../assets/images/lagoa-da-conceicao-image.webp")}
+                                cardFavorite={
+                                    item.isFavorite
+                                        ? require("../../assets/icons/heart-active-icon.webp")
+                                        : require("../../assets/icons/heart-desactive-icon.webp")
+                                }
+                                cardTitle={item.title}
+                                cardRateIcon={require("../../assets/icons/star-icon.webp")}
+                                cardRate={item.rate}
+                                cardLocationIcon={require("../../assets/icons/pin-icon.webp")}
+                                cardLocation={item.location}
+                            />
+                        ))}
+                    </CarouselScroll>
+                </RecommendedContainer>
+            </ContentScroll>
+
+            <BottomNav activeTab={currentTab} onSelectTab={setCurrentTab} />
+        </MainContainer>
     );
 };
 
