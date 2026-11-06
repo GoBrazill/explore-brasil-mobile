@@ -31,8 +31,8 @@ export default function App() {
   }
 
   return (
-    <SafeAreaProvider>
-      <CommingSoon/>
+    <SafeAreaProvider style={{ flex: 1 }}>
+      <CommingSoon heroImage={require("./src/assets/images/coming-soon-hero-image.webp")} title={"Tem novidade no caminho"} description={"Estamos preparando novas experiências para sua próxima viagem. Em breve, você poderá explorar por aqui."}/>
         {/* <Home/> */}
         {/* <OnboardingOne /> */}
         {/* <OnboardingTwo/> */}
