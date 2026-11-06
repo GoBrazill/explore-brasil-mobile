@@ -10,6 +10,7 @@ import Login from './src/screens/Login';
 import Category from './src/screens/Category';
 import PlaceDetail from './src/screens/PlaceDetail';
 import  Home  from "./src/screens/Home/index"
+import  CommingSoon  from './src/screens/ComingSoonScreen';
 export default function App() {
 
   const [loaded] = useFonts({
@@ -30,8 +31,9 @@ export default function App() {
   }
 
   return (
-    <SafeAreaProvider>
-        <Home/>
+    <SafeAreaProvider style={{ flex: 1 }}>
+      <CommingSoon heroImage={require("./src/assets/images/coming-soon-hero-image.webp")} title={"Tem novidade no caminho"} description={"Estamos preparando novas experiências para sua próxima viagem. Em breve, você poderá explorar por aqui."}/>
+        {/* <Home/> */}
         {/* <OnboardingOne /> */}
         {/* <OnboardingTwo/> */}
         {/* <OnboardingThree/> */}
