@@ -4,11 +4,11 @@ export const NavContainer = styled.View`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: 100px;
+  height: auto;
   background-color: #FFFFFF;
   border-top-width: 1px;
   border-top-color: rgba(201, 100, 64, 0.12);
-  padding-bottom: 10px;
+  padding: 10px  0 30px 0;
 `;
 
 export const NavItem = styled.TouchableOpacity`
