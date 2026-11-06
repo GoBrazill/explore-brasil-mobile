@@ -1,15 +1,7 @@
 import React, { useState } from "react";
-import { useSafeAreaInsets } from "react-native-safe-area-context"; // Importando o hook
 import {
     MainContainer,
     ContentScroll,
-    Header,
-    SearchContainer,
-    SearchBar,
-    SearchBarIcon,
-    SearchBarInput,
-    SearchBarFilter,
-    FilterButton,
     ExploreContainer,
     ExploreCategories,
     ExploreTitle,
@@ -30,9 +22,8 @@ import {
     CarouselScroll,
 } from "./style";
 
+import Header from "../../components/Header";
 import Categories from "../../components/Categories";
-import MagnifyingGlass from "../../assets/icons/magnifying-glass.webp";
-import Filter from "../../assets/icons/filter-icon.webp";
 import ArrowRight from "../../assets/icons/arrow-right.webp";
 import SantaCatarinaImg from "../../assets/images/santa-catarina-image.webp";
 import CarouselCard from "../../components/CarouselCard";
@@ -64,22 +55,13 @@ const recommendedItems = [
 
 export const Home = () => {
     const [currentTab, setCurrentTab] = useState("home");
-    const insets = useSafeAreaInsets(); // Obtém { top, bottom, left, right }
 
     return (
         <MainContainer>
-            <Header topInset={insets.top}>
-                <SearchContainer>
-                    <SearchBar>
-                        <SearchBarIcon source={MagnifyingGlass} />
-                        <SearchBarInput placeholder="Busque destinos, cidades..." />
-                    </SearchBar>
-
-                    <FilterButton activeOpacity={0.7}>
-                        <SearchBarFilter source={Filter} />
-                    </FilterButton>
-                </SearchContainer>
-            </Header>
+            <Header
+                variant="search"
+                placeholder="Busque destinos, cidades..."
+            />
 
             <ContentScroll>
                 <ExploreContainer>
