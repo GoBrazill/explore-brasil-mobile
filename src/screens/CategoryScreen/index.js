@@ -12,21 +12,21 @@ import ParkIcon from '../../assets/icons/park-icon.webp'
 import RestaurantIcon from '../../assets/icons/restaurant-icon.webp'
 import CultureIcon from '../../assets/icons/culture-icon.webp'
 
-const Category = () => {
+const CategoryScreen = () => {
 
     const { width } = useWindowDimensions()
 
-    const calculatedWidth = (width - 62) / 2 
+    const calculatedWidth = (width - 62) / 2
 
     return (
         <CategoryView>
-            <Header title={'Categorias'}/>
+            <Header title={'Categorias'} />
             <Grid>
                 <LargeCard>
-                    <BackgroundImage source={BeachImage}/>
+                    <BackgroundImage source={BeachImage} />
                     <ContentWrapperB>
                         <CardIcon>
-                            <Icon source={BeachIcon}/>
+                            <Icon source={BeachIcon} />
                         </CardIcon>
                         <CardTitle>Praias</CardTitle>
                         <CardDesc>128 lugares</CardDesc>
@@ -34,32 +34,32 @@ const Category = () => {
                 </LargeCard>
 
                 <SmallCard cardWidth={calculatedWidth}>
-                    <BackgroundImage source={MuseumImage}/>
+                    <BackgroundImage source={MuseumImage} />
                     <ContentWrapperS>
                         <CardIcon>
-                            <Icon source={MuseumIcon}/>
+                            <Icon source={MuseumIcon} />
                         </CardIcon>
                         <CardTitle>Museus</CardTitle>
                         <CardDesc>84 lugares</CardDesc>
                     </ContentWrapperS>
                 </SmallCard>
-                
+
                 <SmallCard cardWidth={calculatedWidth}>
-                    <BackgroundImage source={ParkImage}/>
+                    <BackgroundImage source={ParkImage} />
                     <ContentWrapperS>
                         <CardIcon>
-                            <Icon source={ParkIcon}/>
+                            <Icon source={ParkIcon} />
                         </CardIcon>
                         <CardTitle>Parques</CardTitle>
                         <CardDesc>143 lugares</CardDesc>
                     </ContentWrapperS>
                 </SmallCard>
-                
+
                 <SmallCard cardWidth={calculatedWidth}>
-                    <BackgroundImage source={RestaurantImage}/>
+                    <BackgroundImage source={RestaurantImage} />
                     <ContentWrapperS>
                         <CardIcon>
-                            <Icon source={RestaurantIcon}/>
+                            <Icon source={RestaurantIcon} />
                         </CardIcon>
                         <CardTitle>Restaurantes</CardTitle>
                         <CardDesc>234 lugares</CardDesc>
@@ -67,10 +67,10 @@ const Category = () => {
                 </SmallCard>
 
                 <SmallCard cardWidth={calculatedWidth}>
-                    <BackgroundImage source={CultureImage}/>
+                    <BackgroundImage source={CultureImage} />
                     <ContentWrapperS>
                         <CardIcon>
-                            <Icon source={CultureIcon}/>
+                            <Icon source={CultureIcon} />
                         </CardIcon>
                         <CardTitle>Cultura</CardTitle>
                         <CardDesc>70 lugares</CardDesc>
@@ -82,4 +82,4 @@ const Category = () => {
     )
 }
 
-export default Category
+export default CategoryScreen
