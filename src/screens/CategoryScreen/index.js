@@ -19,66 +19,68 @@ const CategoryScreen = () => {
     const calculatedWidth = (width - 62) / 2
 
     return (
-        <CategoryView>
+        <>
             <Header title={'Categorias'} />
-            <Grid>
-                <LargeCard>
-                    <BackgroundImage source={BeachImage} />
-                    <ContentWrapperB>
-                        <CardIcon>
-                            <Icon source={BeachIcon} />
-                        </CardIcon>
-                        <CardTitle>Praias</CardTitle>
-                        <CardDesc>128 lugares</CardDesc>
-                    </ContentWrapperB>
-                </LargeCard>
+            <CategoryView>
+                <Grid>
+                    <LargeCard>
+                        <BackgroundImage source={BeachImage} />
+                        <ContentWrapperB>
+                            <CardIcon>
+                                <Icon source={BeachIcon} />
+                            </CardIcon>
+                            <CardTitle>Praias</CardTitle>
+                            <CardDesc>128 lugares</CardDesc>
+                        </ContentWrapperB>
+                    </LargeCard>
 
-                <SmallCard cardWidth={calculatedWidth}>
-                    <BackgroundImage source={MuseumImage} />
-                    <ContentWrapperS>
-                        <CardIcon>
-                            <Icon source={MuseumIcon} />
-                        </CardIcon>
-                        <CardTitle>Museus</CardTitle>
-                        <CardDesc>84 lugares</CardDesc>
-                    </ContentWrapperS>
-                </SmallCard>
+                    <SmallCard cardWidth={calculatedWidth}>
+                        <BackgroundImage source={MuseumImage} />
+                        <ContentWrapperS>
+                            <CardIcon>
+                                <Icon source={MuseumIcon} />
+                            </CardIcon>
+                            <CardTitle>Museus</CardTitle>
+                            <CardDesc>84 lugares</CardDesc>
+                        </ContentWrapperS>
+                    </SmallCard>
 
-                <SmallCard cardWidth={calculatedWidth}>
-                    <BackgroundImage source={ParkImage} />
-                    <ContentWrapperS>
-                        <CardIcon>
-                            <Icon source={ParkIcon} />
-                        </CardIcon>
-                        <CardTitle>Parques</CardTitle>
-                        <CardDesc>143 lugares</CardDesc>
-                    </ContentWrapperS>
-                </SmallCard>
+                    <SmallCard cardWidth={calculatedWidth}>
+                        <BackgroundImage source={ParkImage} />
+                        <ContentWrapperS>
+                            <CardIcon>
+                                <Icon source={ParkIcon} />
+                            </CardIcon>
+                            <CardTitle>Parques</CardTitle>
+                            <CardDesc>143 lugares</CardDesc>
+                        </ContentWrapperS>
+                    </SmallCard>
 
-                <SmallCard cardWidth={calculatedWidth}>
-                    <BackgroundImage source={RestaurantImage} />
-                    <ContentWrapperS>
-                        <CardIcon>
-                            <Icon source={RestaurantIcon} />
-                        </CardIcon>
-                        <CardTitle>Restaurantes</CardTitle>
-                        <CardDesc>234 lugares</CardDesc>
-                    </ContentWrapperS>
-                </SmallCard>
+                    <SmallCard cardWidth={calculatedWidth}>
+                        <BackgroundImage source={RestaurantImage} />
+                        <ContentWrapperS>
+                            <CardIcon>
+                                <Icon source={RestaurantIcon} />
+                            </CardIcon>
+                            <CardTitle>Restaurantes</CardTitle>
+                            <CardDesc>234 lugares</CardDesc>
+                        </ContentWrapperS>
+                    </SmallCard>
 
-                <SmallCard cardWidth={calculatedWidth}>
-                    <BackgroundImage source={CultureImage} />
-                    <ContentWrapperS>
-                        <CardIcon>
-                            <Icon source={CultureIcon} />
-                        </CardIcon>
-                        <CardTitle>Cultura</CardTitle>
-                        <CardDesc>70 lugares</CardDesc>
-                    </ContentWrapperS>
-                </SmallCard>
+                    <SmallCard cardWidth={calculatedWidth}>
+                        <BackgroundImage source={CultureImage} />
+                        <ContentWrapperS>
+                            <CardIcon>
+                                <Icon source={CultureIcon} />
+                            </CardIcon>
+                            <CardTitle>Cultura</CardTitle>
+                            <CardDesc>70 lugares</CardDesc>
+                        </ContentWrapperS>
+                    </SmallCard>
 
-            </Grid>
-        </CategoryView>
+                </Grid>
+            </CategoryView>
+        </>
     )
 }
 
