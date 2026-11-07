@@ -4,7 +4,7 @@ import { BlurView } from "expo-blur";
 export const CategoryView = styled.View`
     gap: 36px;
 
-    padding: 0 20px;
+    padding: 36px 20px;
 `
 
 export const Grid = styled.View`

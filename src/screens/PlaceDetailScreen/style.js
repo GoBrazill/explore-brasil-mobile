@@ -15,7 +15,7 @@ export const IconWrapper = styled.View`
     flex-direction: row;
     justify-content: space-between;
 
-    padding: 20px;
+    padding: 50px 20px 20px 20px;
 `
 
 export const IconCircle = styled.View`

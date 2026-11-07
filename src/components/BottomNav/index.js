@@ -17,7 +17,7 @@ const navTabs = [
   {
     id: "map",
     label: "Mapa",
-    icon: require("../../assets/icons/map-icon.webp"),
+    icon: require("../../assets/icons/map-icon-black.webp"),
     activeIcon: require("../../assets/icons/map-active-icon.webp"),
   },
   {
