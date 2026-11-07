@@ -1,10 +1,10 @@
 import { StatusBar, View } from 'react-native';
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { useFonts } from 'expo-font';
-import OnboardingOneScreen from './src/screens/OnboardingOneScreen';
-import OnboardingThreeScreen from './src/screens/OnboardingThreeScreen';
-import OnboardingTwoScreen from './src/screens/OnboardingTwoScreen';
-import Login from './src/screens/Login';
+import OnboardingOne from './src/screens/OnboardingOneScreen';
+import OnboardingThree from './src/screens/OnboardingThreeScreen';
+import OnboardingTwo from './src/screens/OnboardingTwoScreen';
+import Login from './src/screens/LoginScreen';
 import Category from './src/screens/Category';
 import PlaceDetail from './src/screens/PlaceDetail';
 import Home from "./src/screens/Home/index"
@@ -32,9 +32,9 @@ export default function App() {
     <SafeAreaProvider style={{ flex: 1 }}>
       {/* <CommingSoon heroImage={require("./src/assets/images/coming-soon-hero-image.webp")} title={"Tem novidade no caminho"} description={"Estamos preparando novas experiências para sua próxima viagem. Em breve, você poderá explorar por aqui."}/> */}
       {/* <Home/> */}
-      {/* <OnboardingOneScreen /> */}
-      {/* <OnboardingTwoScreen /> */}
-      {/* <OnboardingThreeScreen /> */}
+      {/* <OnboardingOne /> */}
+      {/* <OnboardingTwo /> */}
+      {/* <OnboardingThree /> */}
       <Login />
       {/* <Category /> */}
       {/* <PlaceDetail /> */}

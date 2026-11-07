@@ -5,7 +5,7 @@ import email from '../../assets/icons/email-icon.webp'
 import padlock from '../../assets/icons/padlock-icon.webp'
 import ButtonSignUp from "../../components/ButtonSignUp"
 
-const Login = () => {
+const LoginScreen = () => {
     return (
         <LoginWrapper>
             <LogotypeWrapper >
@@ -59,4 +59,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default LoginScreen
