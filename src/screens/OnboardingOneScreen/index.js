@@ -2,7 +2,7 @@ import Onboarding from "../../components/Onboarding"
 import OnboardingOneHero from '../../assets/images/onboarding-one-hero.webp'
 
 
-const OnboardingOne = () => {
+const OnboardingOneScreen = () => {
     return (
             <Onboarding 
             backgroundImage={OnboardingOneHero}
@@ -13,4 +13,4 @@ const OnboardingOne = () => {
     )
 }
 
-export default OnboardingOne
+export default OnboardingOneScreen

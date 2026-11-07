@@ -1,16 +1,14 @@
 import { StatusBar, View } from 'react-native';
-// import {} from "./style";
-// import { SafeAreaView } from 'react-native-safe-area-context';
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { useFonts } from 'expo-font';
-import OnboardingOne from './src/screens/OnboardingOne';
-import OnboardingThree from './src/screens/OnboardingThree';
-import OnboardingTwo from './src/screens/OnboardingTwo';
-import Login from './src/screens/Login';
-import Category from './src/screens/Category';
-import PlaceDetail from './src/screens/PlaceDetail';
-import  Home  from "./src/screens/Home/index"
-import  CommingSoon  from './src/screens/ComingSoonScreen';
+import OnboardingOne from './src/screens/OnboardingOneScreen';
+import OnboardingThree from './src/screens/OnboardingThreeScreen';
+import OnboardingTwo from './src/screens/OnboardingTwoScreen';
+import Login from './src/screens/LoginScreen';
+import Category from './src/screens/CategoryScreen';
+import PlaceDetail from './src/screens/PlaceDetailScreen';
+import Home from "./src/screens/Home/index"
+import CommingSoon from './src/screens/ComingSoonScreen';
 export default function App() {
 
   const [loaded] = useFonts({
@@ -32,17 +30,15 @@ export default function App() {
 
   return (
     <SafeAreaProvider style={{ flex: 1 }}>
-      <CommingSoon heroImage={require("./src/assets/images/coming-soon-hero-image.webp")} title={"Tem novidade no caminho"} description={"Estamos preparando novas experiências para sua próxima viagem. Em breve, você poderá explorar por aqui."}/>
-        {/* <Home/> */}
-        {/* <OnboardingOne /> */}
-        {/* <OnboardingTwo/> */}
-        {/* <OnboardingThree/> */}
-        {/* <OnboardingOne /> */}
-        {/* <OnboardingThree /> */}
-        {/* <Login /> */}
-        {/* <Category /> */}
-        {/* <PlaceDetail /> */}
-        <StatusBar style="auto" />
+      {/* <CommingSoon heroImage={require("./src/assets/images/coming-soon-hero-image.webp")} title={"Tem novidade no caminho"} description={"Estamos preparando novas experiências para sua próxima viagem. Em breve, você poderá explorar por aqui."}/> */}
+      {/* <Home/> */}
+      {/* <OnboardingOne /> */}
+      {/* <OnboardingTwo /> */}
+      {/* <OnboardingThree /> */}
+      {/* <Login /> */}
+      {/* <Category /> */}
+      <PlaceDetail />
+      <StatusBar style="auto" />
     </SafeAreaProvider>
   );
 }

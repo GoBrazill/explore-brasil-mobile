@@ -10,7 +10,7 @@ export const OnboardingWrapper = styled.View`
 
     width: 100%;
     height: 100%;
-    padding: 20px;
+    padding: 50px 20px 42px 20px;
 `
 
 export const ContentWrapper = styled.View`

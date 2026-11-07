@@ -19,8 +19,9 @@ import MagnifyingGlass from "../../assets/icons/magnifying-glass.webp";
 import Filter from "../../assets/icons/filter-icon.webp";
 
 export const Header = ({
-  variant = "comeBack", 
+  variant = "comeBack",
   title,
+  hasBackIcon = true,
   onBackPress,
   placeholder = "Busque destinos, cidades...",
   onFilterPress,
@@ -48,9 +49,11 @@ export const Header = ({
         </SearchContainer>
       ) : (
         <BackHeaderContent>
+          {hasBackIcon ? (
           <BackButton activeOpacity={0.7} onPress={onBackPress}>
             <ArrowIcon source={arrowLeft} resizeMode="contain" />
           </BackButton>
+          ) : null}
           <HeaderTitle>{title}</HeaderTitle>
         </BackHeaderContent>
       )}
