@@ -6,7 +6,7 @@ import OnboardingThree from './src/screens/OnboardingThreeScreen';
 import OnboardingTwo from './src/screens/OnboardingTwoScreen';
 import Login from './src/screens/LoginScreen';
 import Category from './src/screens/CategoryScreen';
-import PlaceDetail from './src/screens/PlaceDetail';
+import PlaceDetail from './src/screens/PlaceDetailScreen';
 import Home from "./src/screens/Home/index"
 import CommingSoon from './src/screens/ComingSoonScreen';
 export default function App() {
@@ -36,8 +36,8 @@ export default function App() {
       {/* <OnboardingTwo /> */}
       {/* <OnboardingThree /> */}
       {/* <Login /> */}
-      <Category />
-      {/* <PlaceDetail /> */}
+      {/* <Category /> */}
+      <PlaceDetail />
       <StatusBar style="auto" />
     </SafeAreaProvider>
   );

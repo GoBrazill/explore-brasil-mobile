@@ -9,7 +9,7 @@ import ShareIcon from '../../assets/icons/share-icon.webp'
 import LakeImage from '../../assets/images/lake-image.webp'
 import { View } from "react-native"
 
-const PlaceDetail = () => {
+const PlaceDetailScreen = () => {
     return (
         <StyledView>
             <BackgroundImage source={LakeImage}>
@@ -88,4 +88,4 @@ const PlaceDetail = () => {
     )
 }
 
-export default PlaceDetail
+export default PlaceDetailScreen
