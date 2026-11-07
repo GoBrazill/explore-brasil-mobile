@@ -1,6 +1,4 @@
 import { StatusBar, View } from 'react-native';
-// import {} from "./style";
-// import { SafeAreaView } from 'react-native-safe-area-context';
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { useFonts } from 'expo-font';
 import OnboardingOneScreen from './src/screens/OnboardingOneScreen';
@@ -34,10 +32,10 @@ export default function App() {
     <SafeAreaProvider style={{ flex: 1 }}>
       {/* <CommingSoon heroImage={require("./src/assets/images/coming-soon-hero-image.webp")} title={"Tem novidade no caminho"} description={"Estamos preparando novas experiências para sua próxima viagem. Em breve, você poderá explorar por aqui."}/> */}
       {/* <Home/> */}
-      <OnboardingOneScreen />
+      {/* <OnboardingOneScreen /> */}
       {/* <OnboardingTwoScreen /> */}
       {/* <OnboardingThreeScreen /> */}
-      {/* <Login /> */}
+      <Login />
       {/* <Category /> */}
       {/* <PlaceDetail /> */}
       <StatusBar style="auto" />
