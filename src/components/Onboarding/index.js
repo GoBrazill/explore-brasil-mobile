@@ -1,5 +1,17 @@
 import { Image } from 'react-native'
-import { ActiveBar, BackgroundImage, Bar, BarWrapper, ContentWrapper, OnboardingButton, OnboardingDesc, OnboardingNav, OnboardingSkip, OnboardingTitle, OnboardingWrapper, TitleWrapper } from './style'
+import { ActiveBar, 
+    BackgroundImage, 
+    Bar, 
+    BarWrapper, 
+    ContentWrapper, 
+    OnboardingButton, 
+    OnboardingDesc, 
+    OnboardingNav, 
+    OnboardingSkip, 
+    OnboardingTitle, 
+    OnboardingWrapper, 
+    TitleWrapper 
+} from './style'
 import logo from '../../assets/icons/logo.png'
 import arrowRight from '../../assets/icons/arrow-right.webp'
 
