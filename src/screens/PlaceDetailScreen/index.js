@@ -2,7 +2,7 @@ import { AboutWrapper, ArrowLeft, AvailableBtn, AvailableDesc, AvailableTitle, A
 import StarIcon from '../../assets/icons/star-icon.webp'
 import LocationIcon from '../../assets/icons/location-icon.webp'
 import ClockIcon from '../../assets/icons/clock-icon.webp'
-import MapIcon from '../../assets/icons/map-icon.webp'
+import MapIcon from '../../assets/icons/map-icon-white.webp'
 import ArrowRight from '../../assets/icons/arrow-right.webp'
 import HeartIcon from '../../assets/icons/heart-icon.webp'
 import ShareIcon from '../../assets/icons/share-icon.webp'
