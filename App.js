@@ -9,6 +9,7 @@ import Category from './src/screens/CategoryScreen';
 import PlaceDetail from './src/screens/PlaceDetailScreen';
 import Home from "./src/screens/Home/index"
 import CommingSoon from './src/screens/ComingSoonScreen';
+import Profile from './src/screens/ProfileScreen';
 export default function App() {
 
   const [loaded] = useFonts({
@@ -37,7 +38,8 @@ export default function App() {
       {/* <OnboardingThree /> */}
       {/* <Login /> */}
       {/* <Category /> */}
-      <PlaceDetail />
+      {/* <PlaceDetail /> */}
+      <Profile />
       <StatusBar style="auto" />
     </SafeAreaProvider>
   );
