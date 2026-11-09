@@ -10,14 +10,18 @@
       "supportsTablet": true
     },
     "android": {
-      "adaptiveIcon": {
-      }
+      "adaptiveIcon": {}
     },
     "web": {
       "favicon": "./src/assets/icons/logo.png"
     },
     "plugins": [
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "8432a98f-9dcf-487f-a69d-74297ee8383e"
+      }
+    }
   }
 }
