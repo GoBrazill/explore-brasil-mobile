@@ -1,8 +1,8 @@
 import { ButtonText, StyledButton } from "./style";
 
-const ButtonSignUp = ({text}) => {
+const ButtonSignUp = ({text, event}) => {
     return (
-        <StyledButton><ButtonText>{text}</ButtonText></StyledButton>
+        <StyledButton onPress={event}><ButtonText>{text}</ButtonText></StyledButton>
     )
 }
 

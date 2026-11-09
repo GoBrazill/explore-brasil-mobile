@@ -1,11 +1,39 @@
-import { Image } from "react-native"
+import { Alert, Image } from "react-native"
 import { ContinueWithGoogleWrapper, ContinueWithText, ContinueWithWrapper, FormWrapper, GoogleButton, GoogleLogo, GoogleText, Icon, Input, InputWrapper, Label, LabelWrapper, Line, Link, LoginWrapper, LogotypeHighlight, LogotypeText, LogotypeWrapper, SignUpLink, SignUpText, SubText, Title, TitleWrapper } from "./style"
 import logo from '../../assets/icons/logo.png'
-import email from '../../assets/icons/email-icon.webp'
-import padlock from '../../assets/icons/padlock-icon.webp'
+import Email from '../../assets/icons/email-icon.webp'
+import Padlock from '../../assets/icons/padlock-icon.webp'
 import ButtonSignUp from "../../components/ButtonSignUp"
+import { use, useState } from "react"
 
 const LoginScreen = () => {
+
+    const user = {
+        name: 'teste',
+        email: 'teste@gmail.com',
+        password: '12345'
+    }
+
+    // 2. Add state for the input fields
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    // 3. Create the login handler
+    const handleLogin = () => {
+        if (email.toLowerCase() === user.email && password === user.password) {
+            Alert.alert("Sucesso!", `Bem-vindo, ${user.name}!`);
+            // try {
+            //     await SecureStorage.setItemAsync(
+            //         'user sesion',
+            //         JSON.stringify({name: user.name, email: user.email, password: user.password})
+            //     )
+            // }
+        } else {
+            Alert.alert("Erro", "E-mail ou senha incorretos.");
+        }
+    };
+
+    
     return (
         <LoginWrapper>
             <LogotypeWrapper >
@@ -22,8 +50,12 @@ const LoginScreen = () => {
                     <Label>E-mail</Label>
 
                     <InputWrapper>
-                        <Icon source={email} />
-                        <Input keyboardType="email-address" placeholder="seuemail@exemplo.com" />
+                        <Icon source={Email} />
+                        <Input 
+                        keyboardType="email-address" 
+                        placeholder="seuemail@exemplo.com" 
+                        value={email} 
+                        onChangeText={setEmail}/>
                     </InputWrapper>
                 </LabelWrapper>
 
@@ -31,13 +63,19 @@ const LoginScreen = () => {
                     <Label>Senha</Label>
 
                     <InputWrapper>
-                        <Icon source={padlock} />
-                        <Input keyboardType="decimal-pad" placeholder="****************" />
+                        <Icon source={Padlock} />
+                        <Input 
+                        keyboardType="default" 
+                        placeholder="****************"
+                        secureTextEntry={true}
+                        value={password}
+                        onChangeText={setPassword}
+                        />
                     </InputWrapper>
 
                     <Link>Esqueci minha senha</Link>
                 </LabelWrapper>
-                <ButtonSignUp text={'Entrar'} />
+                <ButtonSignUp text={'Entrar'} event={handleLogin}/>
             </FormWrapper>
 
             <ContinueWithGoogleWrapper>

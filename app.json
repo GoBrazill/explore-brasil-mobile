@@ -10,14 +10,14 @@
       "supportsTablet": true
     },
     "android": {
-      "adaptiveIcon": {
-      }
+      "adaptiveIcon": {}
     },
     "web": {
       "favicon": "./src/assets/icons/logo.png"
     },
     "plugins": [
-      "expo-font"
+      "expo-font",
+      "expo-secure-store"
     ]
   }
 }

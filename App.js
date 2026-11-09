@@ -36,10 +36,10 @@ export default function App() {
       {/* <OnboardingOne /> */}
       {/* <OnboardingTwo /> */}
       {/* <OnboardingThree /> */}
-      {/* <Login /> */}
+      <Login />
       {/* <Category /> */}
       {/* <PlaceDetail /> */}
-      <Profile />
+      {/* <Profile /> */}
       <StatusBar style="auto" />
     </SafeAreaProvider>
   );
