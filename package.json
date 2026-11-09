@@ -7,10 +7,13 @@
     "expo-blur": "~57.0.3",
     "expo-font": "~57.0.4",
     "expo-secure-store": "~57.0.4",
+    "expo-location": "~57.0.23",
     "expo-status-bar": "~57.0.1",
     "react": "19.2.3",
     "react-native": "0.86.3",
+    "react-native-maps": "1.27.2",
     "react-native-safe-area-context": "~5.7.0",
+    "react-native-webview": "13.16.1",
     "styled-components": "^6.6.0"
   },
   "scripts": {
@@ -19,5 +22,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "@expo/ngrok": "^4.1.3"
+  }
 }

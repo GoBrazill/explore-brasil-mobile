@@ -10,6 +10,7 @@ import PlaceDetail from './src/screens/PlaceDetailScreen';
 import Home from "./src/screens/Home/index"
 import CommingSoon from './src/screens/ComingSoonScreen';
 import Profile from './src/screens/ProfileScreen';
+import MapScreen from './src/screens/MapScreen';
 export default function App() {
 
   const [loaded] = useFonts({
@@ -39,7 +40,9 @@ export default function App() {
       <Login />
       {/* <Category /> */}
       {/* <PlaceDetail /> */}
-      {/* <Profile /> */}
+      {/*<Profile />*/}
+      {/* <MapScreen/> */}
+      
       <StatusBar style="auto" />
     </SafeAreaProvider>
   );

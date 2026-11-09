@@ -10,7 +10,8 @@
       "supportsTablet": true
     },
     "android": {
-      "adaptiveIcon": {}
+      "adaptiveIcon": {},
+      "package": "com.srjuninn.explorebrasil"
     },
     "web": {
       "favicon": "./src/assets/icons/logo.png"
@@ -18,6 +19,11 @@
     "plugins": [
       "expo-font",
       "expo-secure-store"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "8432a98f-9dcf-487f-a69d-74297ee8383e"
+      }
+    }
   }
 }
