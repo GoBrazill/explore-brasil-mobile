@@ -10,7 +10,8 @@
       "supportsTablet": true
     },
     "android": {
-      "adaptiveIcon": {}
+      "adaptiveIcon": {},
+      "package": "com.srjuninn.explorebrasil"
     },
     "web": {
       "favicon": "./src/assets/icons/logo.png"
