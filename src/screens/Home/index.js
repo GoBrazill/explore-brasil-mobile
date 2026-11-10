@@ -70,11 +70,11 @@ export const Home = () => {
                         <ExploreAnchor>Ver todas</ExploreAnchor>
                     </ExploreCategories>
                     <CategoriesContainer>
-                        <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Praia"} />
+                        <Categories categoryIcon={require("../../assets/icons/beach-icon.webp")} categoryName={"Praia"} />
                         <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Museum"} />
-                        <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Restaurante"} />
-                        <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Parques"} />
-                        <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Cultura"} />
+                        <Categories categoryIcon={require("../../assets/icons/restaurant-icon.webp")} categoryName={"Restaurante"} />
+                        <Categories categoryIcon={require("../../assets/icons/park-icon.webp")} categoryName={"Parques"} />
+                        <Categories categoryIcon={require("../../assets/icons/culture-icon.webp")} categoryName={"Cultura"} />
                     </CategoriesContainer>
                 </ExploreContainer>
 
