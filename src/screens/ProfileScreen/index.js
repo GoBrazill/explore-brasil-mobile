@@ -65,8 +65,8 @@ const ProfileScreen = () => {
                                     </CardIconWrapper>
                                     <CardTitle>Editar perfil</CardTitle>
                                 </TitleWrapper>
-                                <TouchableOpacity>
-                                    <CardIcon source={OrangeArrowRightIcon}/>
+                                <TouchableOpacity onPress={() => { router.push('/comming-soon') }}>
+                                    <CardIcon source={OrangeArrowRightIcon} />
                                 </TouchableOpacity>
                             </ProfileCardWrapper>
 
@@ -77,7 +77,9 @@ const ProfileScreen = () => {
                                     </CardIconWrapper>
                                     <CardTitle>Meu roteiro</CardTitle>
                                 </TitleWrapper>
-                                <CardIcon source={OrangeArrowRightIcon} />
+                                <TouchableOpacity onPress={() => { router.push('/comming-soon') }}>
+                                    <CardIcon source={OrangeArrowRightIcon} />
+                                </TouchableOpacity>
                             </ProfileCardWrapper>
 
                             <ProfileCardWrapper>
@@ -87,7 +89,9 @@ const ProfileScreen = () => {
                                     </CardIconWrapper>
                                     <CardTitle>Configurações</CardTitle>
                                 </TitleWrapper>
-                                <CardIcon source={OrangeArrowRightIcon} />
+                                <TouchableOpacity onPress={() => { router.push('/comming-soon') }}>
+                                    <CardIcon source={OrangeArrowRightIcon} />
+                                </TouchableOpacity>
                             </ProfileCardWrapper>
                         </ProfileCard>
 
@@ -101,7 +105,9 @@ const ProfileScreen = () => {
                                     </CardIconWrapper>
                                     <CardTitle>Notificações</CardTitle>
                                 </TitleWrapper>
-                                <CardIcon source={OrangeArrowRightIcon} />
+                                <TouchableOpacity onPress={() => { router.push('/comming-soon') }}>
+                                    <CardIcon source={OrangeArrowRightIcon} />
+                                </TouchableOpacity>
                             </ProfileCardWrapper>
 
                             <ProfileCardWrapper>
@@ -111,7 +117,9 @@ const ProfileScreen = () => {
                                     </CardIconWrapper>
                                     <CardTitle>Modo Escuro</CardTitle>
                                 </TitleWrapper>
-                                <CardIcon source={OrangeArrowRightIcon} />
+                                <TouchableOpacity onPress={() => { router.push('/comming-soon') }}>
+                                    <CardIcon source={OrangeArrowRightIcon} />
+                                </TouchableOpacity>
                             </ProfileCardWrapper>
 
                             <ProfileCardWrapper>
@@ -121,7 +129,9 @@ const ProfileScreen = () => {
                                     </CardIconWrapper>
                                     <CardTitle>Termos de uso</CardTitle>
                                 </TitleWrapper>
-                                <CardIcon source={OrangeArrowRightIcon}/>
+                                <TouchableOpacity onPress={() => {router.push('/comming-soon')}}>
+                                    <CardIcon source={OrangeArrowRightIcon} />
+                                </TouchableOpacity>
                             </ProfileCardWrapper>
                         </ProfileCard>
 
