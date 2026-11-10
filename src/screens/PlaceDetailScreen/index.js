@@ -7,23 +7,30 @@ import ArrowRight from '../../assets/icons/arrow-right.webp'
 import HeartIcon from '../../assets/icons/heart-icon.webp'
 import ShareIcon from '../../assets/icons/share-icon.webp'
 import LakeImage from '../../assets/images/lake-image.webp'
-import { View } from "react-native"
+import { TouchableOpacity, View } from "react-native"
+import { router } from "expo-router"
 
 const PlaceDetailScreen = () => {
     return (
         <StyledView>
             <BackgroundImage source={LakeImage}>
                 <IconWrapper>
-                    <IconCircle>
-                        <ArrowLeft source={ArrowRight} />
-                    </IconCircle>
+                    <TouchableOpacity onPress={() => { router.back() }}>
+                        <IconCircle >
+                            <ArrowLeft source={ArrowRight} />
+                        </IconCircle>
+                    </TouchableOpacity>
                     <FavoriteWrapper>
-                        <IconCircle>
-                            <IconL source={ShareIcon} />
-                        </IconCircle>
-                        <IconCircle>
-                            <IconL source={HeartIcon} />
-                        </IconCircle>
+                        <TouchableOpacity onPress={() => { router.push('comming-soon') }}>
+                            <IconCircle>
+                                <IconL source={ShareIcon} />
+                            </IconCircle>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => { router.push('comming-soon') }}>
+                            <IconCircle>
+                                <IconL source={HeartIcon} />
+                            </IconCircle>
+                        </TouchableOpacity>
                     </FavoriteWrapper>
                 </IconWrapper>
             </BackgroundImage>
@@ -64,7 +71,7 @@ const PlaceDetailScreen = () => {
                             Perfeita para esportes aquáticos, gastronomia e um pôr do sol inesquecível.
                         </PlaceDesc>
                     </Gap12>
-                    <ReadMoreBtn>Ler mais</ReadMoreBtn>
+                    <ReadMoreBtn onPress={() => {router.push('comming-soon')}}>Ler mais</ReadMoreBtn>
                 </AboutWrapper>
 
                 <AvailableWrapper>
@@ -76,11 +83,11 @@ const PlaceDetailScreen = () => {
                         </View>
                     </TimeWrapper>
 
-                    <AvailableBtn>Ver horarios</AvailableBtn>
+                    <AvailableBtn onPress={() => {router.push('comming-soon')}}>Ver horarios</AvailableBtn>
                 </AvailableWrapper>
 
             </PlaceWrapper>
-            <SecondaryBtn>
+            <SecondaryBtn onPress={() => {router.push('/map')}}>
                 <Icon source={MapIcon} />
                 <BtnText>Ver no mapa</BtnText>
             </SecondaryBtn>

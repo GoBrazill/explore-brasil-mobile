@@ -14,6 +14,8 @@ import {
   CardLocationIcon,
   CardLocationText,
 } from "./style";
+import { Pressable, TouchableOpacity } from "react-native";
+import { router } from "expo-router";
 
 export const CarouselCard = ({
   cardBackground,
@@ -27,11 +29,13 @@ export const CarouselCard = ({
 }) => {
   return (
     <CardContainer>
-      <CardBackground source={cardBackground}>
-        <FavoriteButton activeOpacity={0.8} onPress={onFavoritePress}>
-          <CardFavoriteIcon source={cardFavorite} resizeMode="contain" />
-        </FavoriteButton>
-      </CardBackground>
+      <Pressable onPress={() => { router.push('/place-detail') }}>
+        <CardBackground source={cardBackground}>
+          <FavoriteButton activeOpacity={0.8} onPress={onFavoritePress}>
+            <CardFavoriteIcon source={cardFavorite} resizeMode="contain" />
+          </FavoriteButton>
+        </CardBackground>
+      </Pressable>
       <CardInfoContainer>
         <TitleRow>
           <CardTitle numberOfLines={1}>{cardTitle}</CardTitle>

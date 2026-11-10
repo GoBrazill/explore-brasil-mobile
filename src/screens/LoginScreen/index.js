@@ -97,7 +97,7 @@ const LoginScreen = () => {
                     <GoogleLogo>G</GoogleLogo>
                     <GoogleText>Continuar com Google</GoogleText>
                 </GoogleButton>
-                <SignUpText>Ainda não tem conta? <SignUpLink onPress={router.replace('/sign-up')}>Cadastre-se</SignUpLink></SignUpText>
+                <SignUpText>Ainda não tem conta? <SignUpLink onPress={router.push('/sign-up')}>Cadastre-se</SignUpLink></SignUpText>
             </ContinueWithGoogleWrapper>
 
         </LoginWrapper>

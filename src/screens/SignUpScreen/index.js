@@ -1,4 +1,4 @@
-import { Image } from "react-native"
+import { Image, ScrollView } from "react-native"
 import { ContinueWithGoogleWrapper, ContinueWithText, ContinueWithWrapper, FormWrapper, GoogleButton, GoogleLogo, GoogleText, Icon, Input, InputWrapper, Label, LabelWrapper, Line, Link, LoginWrapper, LogotypeHighlight, LogotypeText, LogotypeWrapper, SignUpLink, SignUpText, SubText, Title, TitleWrapper } from "./style"
 import logo from '../../assets/icons/logo.png'
 import Email from '../../assets/icons/email-icon.webp'
@@ -10,70 +10,73 @@ import { router } from "expo-router"
 const LoginScreen = () => {
 
     return (
-        <LoginWrapper>
-            <LogotypeWrapper >
-                <Image source={logo} />
-                <LogotypeText>Explore <LogotypeHighlight>Brasil</LogotypeHighlight></LogotypeText>
-            </LogotypeWrapper>
-            <FormWrapper>
-                <TitleWrapper>
-                    <Title>Seja bem-vindo!</Title>
-                    <SubText>Cadastre-se para continuar explorando</SubText>
-                </TitleWrapper>
+        <ScrollView>
 
-                <LabelWrapper>
-                    <Label>Nome</Label>
+            <LoginWrapper>
+                <LogotypeWrapper >
+                    <Image source={logo} />
+                    <LogotypeText>Explore <LogotypeHighlight>Brasil</LogotypeHighlight></LogotypeText>
+                </LogotypeWrapper>
+                <FormWrapper>
+                    <TitleWrapper>
+                        <Title>Seja bem-vindo!</Title>
+                        <SubText>Cadastre-se para continuar explorando</SubText>
+                    </TitleWrapper>
 
-                    <InputWrapper>
-                        <Icon source={Name} />
-                        <Input
-                            keyboardType="default"
-                            placeholder="seu nome aqui"
-                        />
-                    </InputWrapper>
-                </LabelWrapper>
-                <LabelWrapper>
-                    <Label>E-mail</Label>
-                    <InputWrapper>
-                        <Icon source={Email} />
-                        <Input
-                            keyboardType="email-address"
-                            placeholder="seuemail@exemplo.com"
-                        />
-                    </InputWrapper>
-                </LabelWrapper>
+                    <LabelWrapper>
+                        <Label>Nome</Label>
 
-                <LabelWrapper>
-                    <Label>Senha</Label>
+                        <InputWrapper>
+                            <Icon source={Name} />
+                            <Input
+                                keyboardType="default"
+                                placeholder="seu nome aqui"
+                            />
+                        </InputWrapper>
+                    </LabelWrapper>
+                    <LabelWrapper>
+                        <Label>E-mail</Label>
+                        <InputWrapper>
+                            <Icon source={Email} />
+                            <Input
+                                keyboardType="email-address"
+                                placeholder="seuemail@exemplo.com"
+                            />
+                        </InputWrapper>
+                    </LabelWrapper>
 
-                    <InputWrapper>
-                        <Icon source={Padlock} />
-                        <Input
-                            keyboardType="default"
-                            placeholder="****************"
-                            secureTextEntry={true}
-                        />
-                    </InputWrapper>
+                    <LabelWrapper>
+                        <Label>Senha</Label>
 
-                </LabelWrapper>
-                <ButtonSignUp text={'Cadastrar'} />
-            </FormWrapper>
+                        <InputWrapper>
+                            <Icon source={Padlock} />
+                            <Input
+                                keyboardType="default"
+                                placeholder="****************"
+                                secureTextEntry={true}
+                            />
+                        </InputWrapper>
 
-            <ContinueWithGoogleWrapper>
-                <ContinueWithWrapper>
-                    <Line />
-                    <ContinueWithText>ou continue com</ContinueWithText>
-                    <Line />
-                </ContinueWithWrapper>
+                    </LabelWrapper>
+                    <ButtonSignUp text={'Cadastrar'} />
+                </FormWrapper>
 
-                <GoogleButton>
-                    <GoogleLogo>G</GoogleLogo>
-                    <GoogleText>Continuar com Google</GoogleText>
-                </GoogleButton>
-                <SignUpText>Ainda não tem conta? <SignUpLink on>Cadastre-se</SignUpLink></SignUpText>
-            </ContinueWithGoogleWrapper>
+                <ContinueWithGoogleWrapper>
+                    <ContinueWithWrapper>
+                        <Line />
+                        <ContinueWithText>ou continue com</ContinueWithText>
+                        <Line />
+                    </ContinueWithWrapper>
 
-        </LoginWrapper >
+                    <GoogleButton>
+                        <GoogleLogo>G</GoogleLogo>
+                        <GoogleText>Continuar com Google</GoogleText>
+                    </GoogleButton>
+                    <SignUpText>Já tem conta?<SignUpLink onPress={() => {router.push('/login')}}>Entrar</SignUpLink></SignUpText>
+                </ContinueWithGoogleWrapper>
+
+            </LoginWrapper >
+        </ScrollView>
 
     )
 }

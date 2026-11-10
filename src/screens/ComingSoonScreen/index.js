@@ -1,6 +1,7 @@
 import Header from "../../components/Header";
 import BottomNav from "../../components/BottomNav";
 import ButtonSignUp from "../../components/ButtonSignUp";
+import HeroImage from '../../assets/images/coming-soon-hero-image.webp'
 import {
     MainContainer,
     CommingSoonContainer,
@@ -9,28 +10,28 @@ import {
     CommingSoonMessage,
     CommingSoonTitle,
 } from "./style";
+import { router } from "expo-router";
 
-export const CommingSoon = ({ heroImage, title, description, onBackPress }) => {
+export const CommingSoon = () => {
     return (
         <MainContainer>
             <Header
                 variant="comeBack"
                 title="Em breve"
-                onBackPress={onBackPress}
             />
 
             <CommingSoonContainer>
-                <CommingSoonImage source={heroImage} resizeMode="contain" />
+                <CommingSoonImage source={HeroImage} resizeMode="contain" />
 
                 <CommingSoonMessage>
-                    <CommingSoonTitle>{title}</CommingSoonTitle>
-                    <CommingSoonDescription>{description}</CommingSoonDescription>
+                    <CommingSoonTitle>Tem novidade no caminho</CommingSoonTitle>
+                    <CommingSoonDescription>Estamos preparando novas experiências para a sua próxima viagem. Em breve, você poderá explorar por aqui.</CommingSoonDescription>
                 </CommingSoonMessage>
 
-                <ButtonSignUp text={"voltar para o inicio"} />
+                <ButtonSignUp text={"voltar para o inicio"} event={() => {router.push('/')}} />
             </CommingSoonContainer>
 
-            <BottomNav />
+            <BottomNav activeTab="comming-soon" />
         </MainContainer>
     );
 };

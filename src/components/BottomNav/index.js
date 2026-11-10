@@ -52,7 +52,7 @@ export const BottomNav = ({ activeTab = "home", onSelectTab }) => {
               }
 
               const routePath = tab.id === "home" ? "/" : `/${tab.id}`;
-              router.replace(routePath);
+              router.push(routePath);
             }}
           >
             <IconCircle isActive={isActive}>
