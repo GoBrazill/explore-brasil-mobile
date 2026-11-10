@@ -10,6 +10,7 @@ import DarkModeIcon from '../../assets/icons/dark-mode-icon.webp'
 import TosIcon from '../../assets/icons/tos-icon.webp'
 import ProfilePicPlaceholder from '../../assets/images/profile-pic-placeholder.webp'
 import { ScrollView } from "react-native"
+import { router } from "expo-router"
 
 const ProfileScreen = () => {
     return (
@@ -122,7 +123,7 @@ const ProfileScreen = () => {
                             </ProfileCardWrapper>
                         </ProfileCard>
 
-                        <ExitAccBtn>
+                        <ExitAccBtn onPress={() => {router.replace('login')}}>
                             <ExitAccBtnTxt>Sair da conta</ExitAccBtnTxt>
                         </ExitAccBtn>
 
