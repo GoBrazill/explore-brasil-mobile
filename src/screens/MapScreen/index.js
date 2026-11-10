@@ -27,6 +27,7 @@ import {
 import ArrowRight from "../../assets/icons/arrow-right.webp";
 import PinIconImg from "../../assets/icons/pin-icon.webp";
 import StarIconImg from "../../assets/icons/star-icon.webp";
+import { router } from "expo-router";
 
 // Localização mockada padrão do utilizador (Florianópolis)
 const DEFAULT_USER_LOCATION = {
@@ -262,7 +263,7 @@ export const MapScreen = () => {
               </RateRow>
             </PlaceInfo>
 
-            <ActionButton activeOpacity={0.8}>
+            <ActionButton activeOpacity={0.8} onPress={() => {router.push('comming-soon')}}>
               <ActionIcon source={ArrowRight} resizeMode="contain" />
             </ActionButton>
           </FloatingPlaceCard>

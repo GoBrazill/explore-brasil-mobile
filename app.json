@@ -17,7 +17,10 @@
       "favicon": "./src/assets/icons/logo.png"
     },
     "plugins": [
-      "expo-font"
+      "expo-font",
+      "expo-secure-store",
+      "expo-router",
+      "expo-status-bar"
     ],
     "extra": {
       "eas": {

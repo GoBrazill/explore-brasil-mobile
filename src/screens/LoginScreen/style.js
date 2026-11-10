@@ -3,7 +3,7 @@ import styled from "styled-components/native";
 export const LoginWrapper = styled.View`
     gap: 22px;
     width: 100%;
-    padding: 50px 20px 20px 20px;
+    padding: 50px 20px 40px 20px;
     background-color: #FAFAFA;
 `
 
@@ -17,7 +17,7 @@ export const LogotypeWrapper = styled.View`
 `
 
 export const LogotypeText = styled.Text`
-    font-size: 32px;
+    font-size: 28px;
     font-family: 'fugazOne';
 `
 
@@ -35,12 +35,12 @@ export const TitleWrapper = styled.View`
 `
 
 export const Title = styled.Text`
-    font-size: 32px;
+    font-size: 30px;
     font-family: 'interBold';
 `
 
 export const SubText = styled.Text`
-    font-size: 20px;
+    font-size: 18px;
     color: #62748E;
     font-family: 'interRegular';
 `

@@ -9,7 +9,8 @@ import NotificationsIcon from '../../assets/icons/notifications-icon.webp'
 import DarkModeIcon from '../../assets/icons/dark-mode-icon.webp'
 import TosIcon from '../../assets/icons/tos-icon.webp'
 import ProfilePicPlaceholder from '../../assets/images/profile-pic-placeholder.webp'
-import { ScrollView } from "react-native"
+import { ScrollView, TouchableOpacity } from "react-native"
+import { router } from "expo-router"
 
 const ProfileScreen = () => {
     return (
@@ -64,7 +65,9 @@ const ProfileScreen = () => {
                                     </CardIconWrapper>
                                     <CardTitle>Editar perfil</CardTitle>
                                 </TitleWrapper>
-                                <CardIcon source={OrangeArrowRightIcon} />
+                                <TouchableOpacity>
+                                    <CardIcon source={OrangeArrowRightIcon}/>
+                                </TouchableOpacity>
                             </ProfileCardWrapper>
 
                             <ProfileCardWrapper>
@@ -118,11 +121,11 @@ const ProfileScreen = () => {
                                     </CardIconWrapper>
                                     <CardTitle>Termos de uso</CardTitle>
                                 </TitleWrapper>
-                                <CardIcon source={OrangeArrowRightIcon} />
+                                <CardIcon source={OrangeArrowRightIcon}/>
                             </ProfileCardWrapper>
                         </ProfileCard>
 
-                        <ExitAccBtn>
+                        <ExitAccBtn onPress={() => { router.replace('login') }}>
                             <ExitAccBtnTxt>Sair da conta</ExitAccBtnTxt>
                         </ExitAccBtn>
 

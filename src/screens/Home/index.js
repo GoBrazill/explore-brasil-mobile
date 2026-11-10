@@ -28,6 +28,8 @@ import ArrowRight from "../../assets/icons/arrow-right.webp";
 import SantaCatarinaImg from "../../assets/images/santa-catarina-image.webp";
 import CarouselCard from "../../components/CarouselCard";
 import BottomNav from "../../components/BottomNav";
+import { router } from "expo-router";
+import { TouchableOpacity } from "react-native";
 
 const recommendedItems = [
     {
@@ -67,14 +69,24 @@ export const Home = () => {
                 <ExploreContainer>
                     <ExploreCategories>
                         <ExploreTitle>Explore por categoria</ExploreTitle>
-                        <ExploreAnchor>Ver todas</ExploreAnchor>
+                        <ExploreAnchor onPress={() => { router.push('/category') }}>Ver todas</ExploreAnchor>
                     </ExploreCategories>
                     <CategoriesContainer>
-                        <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Praia"} />
-                        <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Museum"} />
-                        <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Restaurante"} />
-                        <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Parques"} />
-                        <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Cultura"} />
+                        <TouchableOpacity onPress={() => { router.push('comming-soon') }}>
+                            <Categories categoryIcon={require("../../assets/icons/beach-icon.webp")} categoryName={"Praia"} />
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => { router.push('comming-soon') }}>
+                            <Categories categoryIcon={require("../../assets/icons/museum-icon.webp")} categoryName={"Museum"} />
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => { router.push('comming-soon') }}>
+                            <Categories categoryIcon={require("../../assets/icons/restaurant-icon.webp")} categoryName={"Restaurante"} />
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => { router.push('comming-soon') }}>
+                            <Categories categoryIcon={require("../../assets/icons/park-icon.webp")} categoryName={"Parques"} />
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => { router.push('comming-soon') }}>
+                            <Categories categoryIcon={require("../../assets/icons/culture-icon.webp")} categoryName={"Cultura"} />
+                        </TouchableOpacity>
                     </CategoriesContainer>
                 </ExploreContainer>
 
@@ -84,17 +96,19 @@ export const Home = () => {
                             <InspireText>Inspire-se</InspireText>
                         </InspireContainer>
                         <InspireTitle>Descubra Santa Catarina</InspireTitle>
-                        <SeeRoadMap>
-                            <RoadMapText>ver roteiro</RoadMapText>
-                            <RoadMapIcon source={ArrowRight} />
-                        </SeeRoadMap>
+                        <TouchableOpacity onPress={() => { router.push('/comming-soon') }}>
+                            <SeeRoadMap>
+                                <RoadMapText>ver roteiro</RoadMapText>
+                                <RoadMapIcon source={ArrowRight} />
+                            </SeeRoadMap>
+                        </TouchableOpacity>
                     </GetInspiredBackground>
                 </GetInspiredContainer>
 
                 <RecommendedContainer>
                     <RecommendedHeader>
                         <RecommendedTitle>Recomendados para você</RecommendedTitle>
-                        <RecommendedAnchor>Ver todas</RecommendedAnchor>
+                        <RecommendedAnchor onPress={() => { router.push('/comming-soon') }}>Ver todas</RecommendedAnchor>
                     </RecommendedHeader>
 
                     <CarouselScroll>
@@ -118,7 +132,7 @@ export const Home = () => {
                 </RecommendedContainer>
             </ContentScroll>
 
-            <BottomNav activeTab={currentTab} onSelectTab={setCurrentTab} />
+            <BottomNav activeTab='home' onSelectTab={setCurrentTab} />
         </MainContainer>
     );
 };

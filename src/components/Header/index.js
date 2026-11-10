@@ -17,6 +17,7 @@ import {
 import arrowLeft from "../../assets/icons/arrow-left.webp";
 import MagnifyingGlass from "../../assets/icons/magnifying-glass.webp";
 import Filter from "../../assets/icons/filter-icon.webp";
+import { router } from "expo-router";
 
 export const Header = ({
   variant = "comeBack",
@@ -50,7 +51,7 @@ export const Header = ({
       ) : (
         <BackHeaderContent>
           {hasBackIcon ? (
-          <BackButton activeOpacity={0.7} onPress={onBackPress}>
+          <BackButton activeOpacity={0.7} onPress={() => {router.back()}}>
             <ArrowIcon source={arrowLeft} resizeMode="contain" />
           </BackButton>
           ) : null}
