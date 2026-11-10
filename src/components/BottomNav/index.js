@@ -22,7 +22,7 @@ const navTabs = [
     activeIcon: require("../../assets/icons/map-active-icon.webp"),
   },
   {
-    id: "favorites",
+    id: "comming-soon",
     label: "Favoritos",
     icon: require("../../assets/icons/favorite-icon.webp"),
     activeIcon: require("../../assets/icons/heart-active-icon.webp"),
@@ -52,7 +52,7 @@ export const BottomNav = ({ activeTab = "home", onSelectTab }) => {
               }
 
               const routePath = tab.id === "home" ? "/" : `/${tab.id}`;
-              router.push(routePath);
+              router.replace(routePath);
             }}
           >
             <IconCircle isActive={isActive}>
