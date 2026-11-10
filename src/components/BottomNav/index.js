@@ -6,6 +6,7 @@ import {
   NavIcon,
   NavText,
 } from "./style";
+import { router } from "expo-router";
 
 const navTabs = [
   {
@@ -44,7 +45,15 @@ export const BottomNav = ({ activeTab = "home", onSelectTab }) => {
           <NavItem
             key={tab.id}
             activeOpacity={0.7}
-            onPress={() => onSelectTab && onSelectTab(tab.id)}
+            onPress={() => {
+              // 1. Run your tab selection function if it exists
+              if (onSelectTab) {
+                onSelectTab(tab.id);
+              }
+
+              const routePath = tab.id === "home" ? "/" : `/${tab.id}`;
+              router.push(routePath);
+            }}
           >
             <IconCircle isActive={isActive}>
               <NavIcon

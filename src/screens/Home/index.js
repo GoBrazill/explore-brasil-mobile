@@ -118,7 +118,7 @@ export const Home = () => {
                 </RecommendedContainer>
             </ContentScroll>
 
-            <BottomNav activeTab={currentTab} onSelectTab={setCurrentTab} />
+            <BottomNav activeTab='home' onSelectTab={setCurrentTab} />
         </MainContainer>
     );
 };
